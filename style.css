@@ -1,0 +1,1578 @@
+/* =====================================================
+   KARBIN MUHAMMAD
+   PREMIUM DARK GOLD SOCIAL MEDIA
+===================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --gold: #e4b52d;
+
+    --gold-light: #ffe58a;
+
+    --gold-dark: #775900;
+
+    --white: #ffffff;
+
+    --gray: #aaa8a2;
+
+    --black: #030303;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #020202;
+
+    color: var(--white);
+
+    font-family:
+        "Noto Sans Arabic",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.background-image {
+
+    position: fixed;
+
+    inset: -3%;
+
+    z-index: -10;
+
+    background-image:
+        url("image.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    /*
+       پێشتر زۆر تاریک بوو،
+       ئێستا وێنەکە زیاتر دیارە
+    */
+
+    filter:
+        brightness(.63)
+        contrast(1.08)
+        saturate(.9);
+
+    transform: scale(1.05);
+
+    animation:
+        backgroundZoom 20s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+
+/* =====================================================
+   BACKGROUND OVERLAY
+===================================================== */
+
+.background-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -9;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.22),
+            rgba(0,0,0,.48)
+        );
+
+}
+
+
+
+/* =====================================================
+   VIGNETTE
+===================================================== */
+
+.background-vignette {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -8;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            transparent 15%,
+            rgba(0,0,0,.16) 48%,
+            rgba(0,0,0,.62) 100%
+        );
+
+}
+
+
+
+/* =====================================================
+   GOLD LIGHTS
+===================================================== */
+
+.light {
+
+    position: fixed;
+
+    width: 330px;
+
+    height: 330px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .11;
+
+    pointer-events: none;
+
+    z-index: -7;
+
+}
+
+
+.light-1 {
+
+    top: -130px;
+
+    left: -120px;
+
+    background: #f2c52d;
+
+}
+
+
+.light-2 {
+
+    right: -140px;
+
+    bottom: -140px;
+
+    background: #b88700;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        40px
+        18px
+        70px;
+
+    perspective: 1600px;
+
+}
+
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 460px;
+
+    padding:
+        27px
+        23px
+        24px;
+
+    border-radius: 34px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(20,20,20,.64),
+            rgba(5,5,5,.48)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    box-shadow:
+
+        0 35px 100px
+        rgba(0,0,0,.75),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12),
+
+        inset 0 0 50px
+        rgba(255,204,48,.035);
+
+    backdrop-filter:
+        blur(18px)
+        saturate(125%);
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(125%);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .18s ease;
+
+    overflow: hidden;
+
+}
+
+
+
+/* Glass shine */
+
+.profile-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -130%;
+
+    width: 65%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.055),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation:
+        glassShine 9s
+        ease-in-out
+        infinite;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =====================================================
+   TOP DECORATION
+===================================================== */
+
+.top-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.top-decoration .line {
+
+    width: 75px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(228,181,45,.65)
+        );
+
+}
+
+
+.top-decoration .line:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(228,181,45,.65),
+            transparent
+        );
+
+}
+
+
+.crown {
+
+    color:
+        var(--gold-light);
+
+    font-size: 18px;
+
+    text-shadow:
+        0 0 18px
+        rgba(255,213,72,.65);
+
+}
+
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-wrapper {
+
+    position: relative;
+
+    width: 180px;
+
+    height: 180px;
+
+    margin:
+        0 auto
+        15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.profile-circle {
+
+    position: relative;
+
+    width: 150px;
+
+    height: 150px;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+            from 0deg,
+            #725500,
+            #fff1a0,
+            #d9ac28,
+            #fff4b0,
+            #775900,
+            #e8bb42
+        );
+
+    box-shadow:
+
+        0 0 0 1px
+        rgba(255,224,110,.45),
+
+        0 0 35px
+        rgba(240,191,35,.25),
+
+        0 0 75px
+        rgba(240,191,35,.08);
+
+    z-index: 3;
+
+}
+
+
+.profile-circle img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border:
+        3px solid
+        #050505;
+
+}
+
+
+
+/* =====================================================
+   ORBITS
+===================================================== */
+
+.profile-orbit {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,210,55,.25);
+
+    pointer-events: none;
+
+}
+
+
+.orbit-one {
+
+    width: 166px;
+
+    height: 166px;
+
+    animation:
+        rotate 12s
+        linear
+        infinite;
+
+}
+
+
+.orbit-two {
+
+    width: 185px;
+
+    height: 185px;
+
+    border-color:
+        rgba(255,210,55,.12);
+
+    animation:
+        rotateReverse 18s
+        linear
+        infinite;
+
+}
+
+
+
+/* =====================================================
+   VERIFIED
+===================================================== */
+
+.verified {
+
+    position: absolute;
+
+    right: -2px;
+
+    bottom: 7px;
+
+    width: 31px;
+
+    height: 31px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff2a0,
+            #d9ad2e,
+            #775700
+        );
+
+    color: #080808;
+
+    font-weight: 900;
+
+    border:
+        3px solid
+        #050505;
+
+    box-shadow:
+        0 0 18px
+        rgba(255,214,65,.6);
+
+}
+
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+h1 {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    color: #fff;
+
+    letter-spacing: -.7px;
+
+    text-shadow:
+        0 4px 20px
+        rgba(0,0,0,.65);
+
+}
+
+
+.main-username {
+
+    text-align: center;
+
+    direction: ltr;
+
+    color:
+        var(--gold-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-top: 6px;
+
+}
+
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+
+    margin:
+        19px
+        auto
+        4px;
+
+    padding:
+        13px
+        15px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+
+}
+
+
+.quote-ku {
+
+    text-align: center;
+
+    color:
+        #eeeae0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.quote-ar {
+
+    direction: rtl;
+
+    text-align: center;
+
+    margin-top: 6px;
+
+    color:
+        #9f9c95;
+
+    font-size: 11px;
+
+}
+
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        20px
+        0
+        17px;
+
+}
+
+
+.divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(228,181,45,.38)
+        );
+
+}
+
+
+.divider span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(228,181,45,.38),
+            transparent
+        );
+
+}
+
+
+.divider b {
+
+    color:
+        var(--gold-light);
+
+    font-size: 13px;
+
+    text-shadow:
+        0 0 13px
+        rgba(255,214,68,.7);
+
+}
+
+
+
+/* =====================================================
+   SOCIAL LIST
+===================================================== */
+
+.social-list {
+
+    display: grid;
+
+    gap: 12px;
+
+}
+
+
+
+/* =====================================================
+   SOCIAL CARD
+===================================================== */
+
+.social-card {
+
+    position: relative;
+
+    min-height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        10px
+        12px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    background:
+
+        linear-gradient(
+            110deg,
+            rgba(255,255,255,.075),
+            rgba(0,0,0,.32)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.08),
+
+        0 12px 28px
+        rgba(0,0,0,.32);
+
+    direction: ltr;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+
+/* glowing side */
+
+.social-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 12%;
+
+    width: 3px;
+
+    height: 76%;
+
+    border-radius: 10px;
+
+    opacity: .75;
+
+}
+
+
+
+/* Hover */
+
+.social-card:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.012);
+
+    border-color:
+        rgba(255,216,82,.42);
+
+    box-shadow:
+
+        0 18px 40px
+        rgba(0,0,0,.45),
+
+        0 0 28px
+        rgba(255,206,52,.08);
+
+}
+
+
+
+/* =====================================================
+   SOCIAL ICON
+===================================================== */
+
+.social-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    color: #fff;
+
+    box-shadow:
+
+        0 8px 22px
+        rgba(0,0,0,.35),
+
+        inset 0 1px 0
+        rgba(255,255,255,.3);
+
+}
+
+
+.social-icon svg {
+
+    width: 28px;
+
+    height: 28px;
+
+}
+
+
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
+.instagram .social-icon {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ffd978,
+            #fa477d 42%,
+            #c13584 67%,
+            #833ab4
+        );
+
+}
+
+
+.instagram::before {
+
+    background:
+        #e94d87;
+
+}
+
+
+
+/* =====================================================
+   SNAPCHAT
+===================================================== */
+
+.snapchat .social-icon {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff8a2,
+            #ffe500 50%,
+            #e6c300
+        );
+
+    color: #111;
+
+}
+
+
+.snapchat::before {
+
+    background:
+        #ffe000;
+
+}
+
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp .social-icon {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #5fff86,
+            #19c85a 55%,
+            #078b3e
+        );
+
+}
+
+
+.whatsapp::before {
+
+    background:
+        #25d366;
+
+}
+
+
+
+/* =====================================================
+   TELEGRAM
+===================================================== */
+
+.telegram .social-icon {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #73dcff,
+            #24aee9 55%,
+            #087dbb
+        );
+
+}
+
+
+.telegram::before {
+
+    background:
+        #27aeea;
+
+}
+
+
+
+/* =====================================================
+   SOCIAL TEXT
+===================================================== */
+
+.social-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+    text-align: left;
+
+}
+
+
+.social-content span {
+
+    display: block;
+
+    color:
+        #9c9992;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    margin-bottom: 3px;
+
+}
+
+
+.social-content strong {
+
+    display: block;
+
+    color:
+        #f5f2e9;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: .1px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.social-arrow {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    color:
+        var(--gold-light);
+
+    border:
+        1px solid
+        rgba(228,181,45,.35);
+
+    background:
+        rgba(228,181,45,.055);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.social-arrow svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+
+.social-card:hover
+.social-arrow {
+
+    transform:
+        translate(3px,-3px);
+
+    background:
+        rgba(228,181,45,.14);
+
+    box-shadow:
+        0 0 20px
+        rgba(228,181,45,.15);
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 23px;
+
+    direction: ltr;
+
+}
+
+
+.footer-line {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(228,181,45,.28)
+        );
+
+}
+
+
+.footer-line:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(228,181,45,.28),
+            transparent
+        );
+
+}
+
+
+.footer-text {
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+
+.footer-text strong {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-text small {
+
+    display: block;
+
+    color:
+        #6d6961;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    margin-top: 4px;
+
+}
+
+
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+.share-button {
+
+    position: fixed;
+
+    left: 18px;
+
+    bottom: 18px;
+
+    width: 47px;
+
+    height: 47px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(228,181,45,.3);
+
+    background:
+        rgba(8,8,8,.7);
+
+    color:
+        var(--gold-light);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: .3s ease;
+
+}
+
+
+.share-button svg {
+
+    width: 21px;
+
+    height: 21px;
+
+}
+
+
+.share-button:hover {
+
+    transform:
+        translateY(-4px)
+        rotate(7deg);
+
+    border-color:
+        var(--gold);
+
+}
+
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 28px;
+
+    transform:
+        translate(-50%, 30px);
+
+    padding:
+        9px
+        17px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(8,8,8,.92);
+
+    border:
+        1px solid
+        rgba(228,181,45,.3);
+
+    color:
+        #fff;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .3s ease;
+
+    z-index: 50;
+
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+
+}
+
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes backgroundZoom {
+
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes rotateReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+@keyframes glassShine {
+
+    0%,
+    45% {
+        left: -130%;
+    }
+
+    65%,
+    100% {
+        left: 130%;
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .main-container {
+
+        padding:
+            24px
+            11px
+            75px;
+
+    }
+
+
+    .profile-card {
+
+        padding:
+            22px
+            15px
+            20px;
+
+        border-radius: 29px;
+
+    }
+
+
+    .profile-wrapper {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+    .profile-circle {
+
+        width: 140px;
+
+        height: 140px;
+
+    }
+
+
+    .orbit-one {
+
+        width: 157px;
+
+        height: 157px;
+
+    }
+
+
+    .orbit-two {
+
+        width: 176px;
+
+        height: 176px;
+
+    }
+
+
+    h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .quote {
+
+        padding:
+            12px
+            10px;
+
+    }
+
+
+    .quote-ku {
+
+        font-size: 12px;
+
+    }
+
+
+    .social-card {
+
+        min-height: 70px;
+
+        border-radius: 18px;
+
+        gap: 11px;
+
+    }
+
+
+    .social-icon {
+
+        width: 44px;
+
+        height: 44px;
+
+        flex-basis: 44px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .social-icon svg {
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    .social-content strong {
+
+        font-size: 13px;
+
+    }
+
+
+    .social-arrow {
+
+        width: 34px;
+
+        height: 34px;
+
+        flex-basis: 34px;
+
+    }
+
+
+    .footer-text strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .footer-text small {
+
+        font-size: 6px;
+
+    }
+
+
+    .share-button {
+
+        width: 44px;
+
+        height: 44px;
+
+        left: 13px;
+
+        bottom: 13px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}
